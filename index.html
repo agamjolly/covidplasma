@@ -1,21 +1,100 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <title>Homepage</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/custom.css" rel="stylesheet">
   </head>
+  
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="min-h-screen">
+        <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+            <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Some Name</a>
+                            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Donate</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contribute</a>
+      </nav>
+  
+</div>
+<div class="py-12 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <p class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Dashboard
+        </p>
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          Plasma donors list 
+        </h3>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
+          Find and contact donors who have recently recovered from SARS-CoV-2 (novel Coronavirus)
+        </p> <br>
+      </div>
+  
+      
+
+  </div>
+
+
+    <div class="container my-12 mx-auto px-7 p-4 px-12" >
+      <div class="flex flex-wrap -mx-10 lg:-mx-4">
+        <!-- Cards -->
+
+        <div class="flex flex-wrap -mx-4 overflow-hidden sm:-mx-6 md:-mx-8 lg:-mx-6 xl:-mx-6">
+          <div class="max-w-sm rounded-lg overflow-hidden shadow-lg nice-card">
+            <div class="px-6 py-4 mx-10">
+              <div class="font-bold text-xl mb-2">22M, Mumbai</div>
+              <p class="text-gray-700 text-base">
+                <b>Blood Group: </b>B+   <br> 
+                <b>Location: </b>Bandra   <br> <!-- Narrowed down to area.-->
+                <b>Age: </b>22   <br>
+                <b>Sex: </b>Male   <br> 
+                <b>Recovery: </b>06-06-2020   <br>
+                <b>Contact: </b>+91 84271 66778   <br> 
+              </p>
+            </div>
+            <div class="px-6 py-4 mx-10">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Mumbai</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">B+</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">22M</span>
+            </div>
+          </div> 
+        </div>
+
+        <div class="flex flex-wrap -mx-4 overflow-hidden sm:-mx-6 md:-mx-8 lg:-mx-6 xl:-mx-6">
+          <div class="max-w-sm rounded-lg overflow-hidden shadow-lg nice-card">
+            <div class="px-6 py-4 mx-10">
+              <div class="font-bold text-xl mb-2">34F, Delhi</div>
+              <p class="text-gray-700 text-base">
+                <b>Blood Group: </b>A-   <br> 
+                <b>Location: </b>Ashok Vihar   <br> <!-- Narrowed down to area.-->
+                <b>Age: </b>34   <br>
+                <b>Sex: </b>Female   <br> 
+                <b>Recovery: </b>26-05-2020   <br>
+                <b>Contact: </b>+91 99999 66778   <br> 
+              </p>
+            </div>
+            <div class="px-6 py-4 mx-10">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Delhi</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">A-</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">34F</span>
+            </div>
+          </div> 
+        </div>
+      </div>
     </div>
-  </section>
+
   </body>
 </html>
