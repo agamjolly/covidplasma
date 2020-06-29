@@ -47,7 +47,8 @@
 <div class="flex items-center h-screen w-full bg-teal-lighter">
   <div class="w-full bg-white rounded-lg shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
     <h1 class="block w-full text-center text-grey-darkest mb-6"> <b> Fill this form to contribute. </b> </h1>
-    <form class="mb-4 md:flex md:flex-wrap md:justify-between" action="/" method="post">
+
+    <form class="mb-4 md:flex md:flex-wrap md:justify-between" method="POST" action="https://formspree.io/xaypdvwj">
       <div class="flex flex-col mb-4 md:w-1/2">
         <label class="mb-2 uppercase tracking-wide text-sm text-grey-dark" for="first_name">First Name</label>
         <input class="border py-2 px-3 text-grey-darkest md:mr-2" type="text" name="first_name" id="first_name">
@@ -66,6 +67,7 @@
       </div>
       <button class="block background-teal hover:bg-teal-dark text-teal-dark uppercase text-lg mx-auto p-4 rounded-lg" type="submit">Contribute now!</button>
     </form>
+
     <a class="block w-full text-center no-underline text-sm text-grey-dark hover:text-grey-darker" href="/contribute">Were looking to donate plasma instead?</a>
   </div>
 </div>
