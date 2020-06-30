@@ -5,7 +5,7 @@ Some random placeholder text here.
 ### Frontend Checklist (Agam, Agrim)
 
 - [x] Navbar Highlight (Agam/Agrim)
-- [ ] Card Hover (Agam)
+- [x] Card Hover (Agam)
 - [x] Change Footer (Agrim)
 - [ ] Search Bar Filters Working (Agam) 
 - [ ] Joining Navbar Components (Agrim)
