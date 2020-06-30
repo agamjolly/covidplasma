@@ -5,9 +5,12 @@ Some random placeholder text here.
 ### Frontend Checklist (Agam, Agrim)
 
 - [x] Navbar Highlight (Agam/Agrim)
-- [ ] Card Hover
-- [ ] Change Footer
-- [ ] Search Bar Working (Filters) 
+- [ ] Card Hover (Agam)
+- [x] Change Footer (Agrim)
+- [ ] Search Bar Filters Working (Agam) 
+- [ ] Joining Navbar Components (Agrim)
+- [ ] Donate and Contribute Pages (Agrim)
+- [ ] Initialise Test Data (Agrim/Agam)
 
 ### Backend Checklist (Agam, Harsh)
 
@@ -17,7 +20,7 @@ Some random placeholder text here.
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
 
-### Misc Checklist
+### Misc Checklist (Abhinav, Agrim, Agam)
 
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
