@@ -1,0 +1,18 @@
+/* .nice-card { 
+    border-radius: 0rem;
+}
+*/
+
+.nice-card {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; 
+    box-shadow: 2px 2px 16px -6px rgba(0,0,0,0.55);
+}
+
+
+
+.cool-bar {
+    width: 90%;
+}
