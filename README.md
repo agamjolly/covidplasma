@@ -2,4 +2,4 @@
 
 The purpose of this app is to aid the Government of India with its plasma support system.
 
-<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly.
+<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma.
