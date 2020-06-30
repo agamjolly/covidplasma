@@ -11,5 +11,4 @@ The purpose of this app is to aid the Government of India with its plasma suppor
 - [ ] Logo
 - [ ] Search Bar Working (Filters) 
 
-<hr>
 <h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma.
