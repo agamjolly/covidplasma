@@ -1,6 +1,6 @@
 # COVID-19 Plasma Dashboard
 
-The purpose of this app is to aid the Government of India with its plasma support system.
+Some random placeholder text here. 
 
 ### Frontend Checklist (Agam, Agrim)
 
