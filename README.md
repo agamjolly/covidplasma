@@ -17,7 +17,7 @@ Some random placeholder text here.
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
 
-### Misc Checklist
+### Misc Checklist (Abhinav, Agrim, Agam)
 
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
