@@ -6,7 +6,7 @@ Some random placeholder text here.
 
 - [x] Navbar Highlight (Agam/Agrim)
 - [ ] Card Hover
-- [ ] Change Footer
+- [x] Change Footer
 - [ ] Search Bar Working (Filters) 
 
 ### Backend Checklist (Agam, Harsh)
