@@ -10,7 +10,7 @@ Some random placeholder text here.
 - [ ] Search Bar Filters Working (Agam) 
 - [ ] Joining Navbar Components (Agrim)
 - [ ] Donate and Contribute Pages (Agrim)
-- [ ] Initialise Test Data (Agrim/Agam)
+- [x] Initialise Test Data (Agrim)
 
 ### Backend Checklist (Agam, Harsh)
 
