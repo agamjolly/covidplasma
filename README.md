@@ -8,7 +8,7 @@ Some random placeholder text here.
 - [x] Card Hover (Agam)
 - [x] Change Footer (Agrim)
 - [ ] Search Bar Filters Working (Agam) 
-- [ ] Joining Navbar Components (Agrim)
+- [x] Joining Navbar Components (Agrim)
 - [ ] Donate and Contribute Pages (Agrim)
 - [x] Initialise Test Data (Agrim)
 
