@@ -13,6 +13,7 @@ Some random placeholder text here.
 - [x] Initialise Test Data (Agrim)
 - [x] Create about.html (Agrim)
 - [ ] Modify about.html to make is responsive (Agam)
+- [x] Google captcha (Agrim)
 
 ### Backend Checklist (Agam, Harsh)
 
