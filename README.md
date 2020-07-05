@@ -14,6 +14,7 @@ Some random placeholder text here.
 - [x] Create about.html (Agrim)
 - [ ] Modify about.html to make is responsive (Agam)
 - [x] Google captcha (Agrim)
+- [ ] Update donate.html form (Agrim)
 
 ### Backend Checklist (Agam, Harsh)
 
