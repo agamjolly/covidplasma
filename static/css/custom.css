@@ -11,3 +11,22 @@
 .card-start {
     
 }
+
+.about_section { 
+    padding: 1% 20% 1.5% 20%;
+    /*display: block; */
+    /*text-align: center;*/
+    margin-right: auto;
+        
+}
+
+.table-auto{
+    padding: 0% % 1% 1%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.blood {
+    margin-top: 25%;
+}

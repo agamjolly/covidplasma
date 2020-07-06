@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <title>COVID-19 India Plasma Dashboard</title>
+      <title>About | COVID-19 India Plasma Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -27,8 +27,8 @@
                         </div>
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Home</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="soon.html">Donate</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="donate.html">Donate</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">About</a>
       </nav>
   
 </div>
@@ -46,42 +46,19 @@
   </div>
 
 
-<style>
-    .about_section { 
-        padding: 1% 5% 5% 5%;
-        /*display: block; */
-        /*text-align: center;*/
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .table-auto{
-        padding: 1% 1% 1% 1%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-</style>
-
 <!-- to allign in the centre -->
 <div class="about_section md:flex" >
   <div class="md:flex-shrink-0">
-    <img class="rounded-lg md:w-56" src="https://sc02.alicdn.com/kf/HTB1zevPs5CYBuNkHFCcq6AHtVXab.jpg_350x350.jpg" alt="Blood bag">
+    <img class="blood rounded-lg md:w-56" src="https://sc02.alicdn.com/kf/HTB1zevPs5CYBuNkHFCcq6AHtVXab.jpg_350x350.jpg" alt="Blood bag">
   </div>
   <div class="mt-4 md:mt-0 md:ml-6">
     <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">MISSION</div>
-    <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Find plasma donors for your or your loved ones' plasma therapy against COVID-19. </a>
+    <h2 class="block mt-1 text-lg leading-tight font-semibold text-gray-900">Find plasma donors for your or your loved ones' plasma therapy against COVID-19. </h2>
     <p class="mt-2 text-gray-600">Our team created a website to connect current coronavirus (SARS-CoV-2) patients with recovered ones who wish to donate their plasma for <u><a href = "https://timesofindia.indiatimes.com/india/coronavirus-all-you-need-to-know-about-plasma-therapy/articleshow/75463058.cms">plasma therapy</a></u>. We are committed to our goal of amassing a large public dataset of willing donors through publicly available data and our own donor-registration functionality. Donors can register by agreeing to donate their blood – we ask them for details not limited to name, contact information, date and proof of recovery, blood group, other medical conditions (comorbidities) etc. We extensively vet any donor registering through us to the best of our abilities.</p>
     <br>
-    <p class="mt-2 text-gray-600"> What sets us apart from other plasma donation dashboards is our open source nature. The information about the donors is listed on our website. Critical patients and their loved ones don’t have to wait for match-making and can directly contact eligible patients on urgent basis. We ensure privacy of our kind donors by protecting all their non-contact-related information. <b> If you are a patient and want to find out which blood group is uitable for your treatment, please refer to the table below: </b> </p>
-
-  </div>
-</div>  
-
-<br>
-
-<!-- to allign in the centre -->
-<table class="table-auto">
+    <p class="mt-2 text-gray-600"> What sets us apart from other plasma donation dashboards is our open source nature. The information about the donors is listed on our website. Critical patients and their loved ones don’t have to wait for match-making and can directly contact eligible patients on urgent basis. We ensure privacy of our kind donors by protecting all their non-contact-related information. <b> If you are a patient and want to find out which blood group is suitable for your treatment, please refer to the table below: </b> </p><br>
+      
+    <table class="table-auto">
   <thead>
     <tr>
       <th class="px-4 py-2">If your blood type is:</th>
@@ -133,6 +110,12 @@
   </tbody>
 </table>
 
+  </div>
+</div>  
+
+<!-- to allign in the centre -->
+
+
 <br>
 
 <!-- Footer --> 
@@ -157,41 +140,7 @@
 
 </div>
 
-    <!-- <script>
-    $(document).ready(function(){ 
-        $('.nice-card').hover(
-            // trigger when mouse hovers
-            function(){
-                $(this).animate({
-                    marginTop: "-=1%",
-                },200);
-            },
-            // trigger when mouse out
-            function(){ 
-                $(this).animate({
-                    marginTop: "0%"
-                },200);
-            }
-        );
-    });
-    </script>
-      
-    <script>
-      $.extend($.expr[":"], {
-        "containsIN": function(elem, i, match, array) {
-        return (elem.textContent || elem.innerText || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
-        }
-        });
-
-      $('.cool-bar').on('keyup',function () {
-          console.log(filter);
-          $('.card-start').show();
-  	      var filter = $(this).val(); // get the value of the input, which we filter on
-          console.log(filter.toLowerCase());
-          $('.card-start').find("article:not(:containsIN(" + filter + "))").parent().css('display','none');
-      });  
-      
-    </script> -->
+      </div>
     
 </body>
     
