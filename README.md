@@ -23,9 +23,11 @@ A checklist entailing tasks to be completed for the dashboard.
 
 ### Backend Checklist (Agam, Harsh)
 
-- [ ] Route Domain (Agam)
+- [x] Route Domain (Agam)
 - [x] JSON Object Model (Harsh)
-- [ ] List to Dictionary Model (Harsh) 
+- [x] SSL Setup
+- [ ] www Redirect
+- [x] List to Dictionary Model (Harsh) 
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
 
