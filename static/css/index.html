@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>COVID-19 India Plasma Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="static/css/custom.css" rel="stylesheet">
+      <link href="static/css/animate.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="min-h-screen">
+        <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+            <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <a href="#" class="text-lg font-semibold text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Covidplasma</a>
+                            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="soon.html">Donate</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="soon.html">About</a>
+      </nav>
+  
+</div>
+<div class="py-12 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          COVID-19 Plasma Donors Dashboard
+        </h3>
+        <p class="text-center mt-4 text-xl leading-7 text-gray-500 lg:mx-auto">
+          Find and contact donors around you who have recently recovered from the coronavirus.
+        </p>
+          <!-- This is an example component --><br>
+     <div class="pt-2 relative mx-auto text-gray-600">
+        <input class="cool-bar border-2 border-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-lg focus:outline-none"
+          type="search" name="search" placeholder="Filter by blood type, location...">
+        <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+          <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+            width="512px" height="512px">
+            <path
+              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+          </svg>
+        </button>
+      </div>
+      </div>
+        
+
+  </div>
+
+    
+
+  <div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap lg:-mx-4">
+        
+        <!-- CARD START --> 
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+         
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="title font-bold text-2xl mb-2 text-center">22M, Mumbai</div>
+                    
+                  <p class="text-gray-700 ml-2 mr-2 pt-2">
+                    <b>Blood Group: </b>B+   <br> 
+                    <b>Location: </b>Bandra   <br> <!-- Narrowed down to area.-->
+                    <b>Age: </b>22   <br>
+                    <b>Sex: </b>Male   <br> 
+                    <b>Recovery: </b>06-06-2020   <br>
+                    <b>Contact: </b>+91 84271 66778   <br> 
+                  </p>
+                </div>
+                <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Mumbai</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">B+</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">22M</span>
+                </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+        <!-- CARD END --> 
+        
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+              <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                <div class="font-bold text-2xl mb-2 text-center">34F, Delhi</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>AB+   <br> 
+                      <b>Location: </b>Ashok Vihar   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>34   <br>
+                      <b>Sex: </b>Female   <br> 
+                      <b>Recovery: </b>26-05-2020   <br>
+                      <b>Contact: </b>+91 00000 99999   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Delhi</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">AB+</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">34F</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">44F, Delhi</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>A+   <br> 
+                      <b>Location: </b>Rohini    <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>44   <br>
+                      <b>Sex: </b>Female   <br> 
+                      <b>Recovery: </b>01-07-2020   <br>
+                      <b>Contact: </b>+91 11111 62222   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Delhi</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">A+</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">44F</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">67M, Delhi</div>                    
+                    
+                      <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>O-   <br> 
+                      <b>Location: </b>Model Town   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>67   <br>
+                      <b>Sex: </b>Male   <br> 
+                      <b>Recovery: </b>16-05-2020   <br>
+                      <b>Contact: </b>+91 89169 67578   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Delhi</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">O-</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">67M</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">52M, Bangalore</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>B-   <br> 
+                      <b>Location: </b>Tavarekere   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>52   <br>
+                      <b>Sex: </b>Male   <br> 
+                      <b>Recovery: </b>22-06-2020   <br>
+                      <b>Contact: </b>+91 34567 13289   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Bangalore</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">B-</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">52M</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">39F, Kolkata</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>A-   <br> 
+                      <b>Location: </b>Kalighat   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>39   <br>
+                      <b>Sex: </b>Female   <br> 
+                      <b>Recovery: </b>31-05-2020   <br>
+                      <b>Contact: </b>+91 34782 45020   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Kolkata</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">A-</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">39F</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">19M, Bangalore</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>B-   <br> 
+                      <b>Location: </b>Mysore   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>19   <br>
+                      <b>Sex: </b>Male   <br> 
+                      <b>Recovery: </b>30-06-2020   <br>
+                      <b>Contact: </b>+91 09228 13289   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Bangalore</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">B-</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">19M</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">18F, Jalandhar</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>B-   <br> 
+                      <b>Location: </b>Adarsh Nagar   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>18  <br>
+                      <b>Sex: </b>Female   <br> 
+                      <b>Recovery: </b>16-06-2020   <br>
+                      <b>Contact: </b>+91 97430 13879   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Jalandhar</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">B-</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">18F</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+        <!-- Column -->
+        <div class="card-start my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="rounded-lg   nice-card">
+
+              <div class="md:flex-shrink-0 rounded-l-lg overflow-hidden   ">
+            
+                <div class="px-6 py-4 rounded-lg wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                  <div class="font-bold text-2xl mb-2 text-center">28F, Kolkata</div>                    
+                    <p class="text-gray-700 ml-2 mr-2 pt-2">
+                      <b>Blood Group: </b>AB+   <br> 
+                      <b>Location: </b>Golpark   <br> <!-- Narrowed down to area.-->
+                      <b>Age: </b>28   <br>
+                      <b>Sex: </b>Female   <br> 
+                      <b>Recovery: </b>21-06-2020   <br>
+                      <b>Contact: </b>+91 78923 12497   <br> 
+                    </p>
+                  </div>
+                  <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Kolkata</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">AB+</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">28F</span>
+                  </div>
+              </div>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+
+    </div>
+</div>
+</div>
+<!-- Footer --> 
+                
+                
+
+<div>
+   <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+      md:flex-row max-w-6xl">
+      <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
+      <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+        
+         <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+         <!--<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
+      </div>
+   </div>
+</div>
+                <!-- Footer end--> 
+</div>
+</div>
+
+</div>
+
+    <script>
+    $(document).ready(function(){ 
+        $('.nice-card').hover(
+            // trigger when mouse hovers
+            function(){
+                $(this).animate({
+                    marginTop: "-=1%",
+                },200);
+            },
+            // trigger when mouse out
+            function(){ 
+                $(this).animate({
+                    marginTop: "0%"
+                },200);
+            }
+        );
+    });
+    </script>
+      
+    <script>
+      $.extend($.expr[":"], {
+        "containsIN": function(elem, i, match, array) {
+        return (elem.textContent || elem.innerText || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+        }
+        });
+
+    $('.cool-bar').on('keyup',function () {
+        console.log(filter);
+        $('.card-start').show();
+	      var filter = $(this).val(); // get the value of the input, which we filter on
+        console.log(filter.toLowerCase());
+        $('.card-start').find("article:not(:containsIN(" + filter + "))").parent().css('display','none');
+    });  
+      
+    </script>
+    
+</body>
+    
+</html>
