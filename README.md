@@ -11,6 +11,8 @@ Some random placeholder text here.
 - [x] Joining Navbar Components (Agrim)
 - [x] Donate and Contribute Pages (Agrim)
 - [x] Initialise Test Data (Agrim)
+- [x] Create about.html (Agrim)
+- [ ] Modify about.html to make is responsive (Agam)
 
 ### Backend Checklist (Agam, Harsh)
 
