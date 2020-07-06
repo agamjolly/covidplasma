@@ -1,23 +1,30 @@
 # COVID-19 Plasma Dashboard
 
-Some random placeholder text here. 
+A checklist entailing tasks to be completed for the dashboard.
+
+### Content Writing (Pranjal, Kevin)
+
+- [ ] Work on the about page (Pranjal/Kevin)
+- [ ] Content/One-liners for the donate page (Unassigned)
+- [ ] FAQ Page (Unassigned) 
 
 ### Frontend Checklist (Agam, Agrim)
 
 - [x] Navbar Highlight (Agam/Agrim)
 - [x] Card Hover (Agam)
 - [x] Change Footer (Agrim)
-- [ ] Search Bar Filters Working (Agam) 
+- [x] Search Bar Filters Working (Agam) 
 - [x] Joining Navbar Components (Agrim)
 - [x] Donate and Contribute Pages (Agrim)
 - [x] Initialise Test Data (Agrim)
 - [x] Create about.html (Agrim)
-- [ ] Modify about.html to make is responsive (Agam)
+- [x] Modify about.html to make is responsive (Agam)
+- [ ] Work on donate.html styling (Agrim)
 
 ### Backend Checklist (Agam, Harsh)
 
 - [ ] Route Domain (Agam)
-- [ ] JSON Object Model (Harsh)
+- [x] JSON Object Model (Harsh)
 - [ ] List to Dictionary Model (Harsh) 
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
@@ -26,9 +33,9 @@ Some random placeholder text here.
 
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
-- [ ] Logo (Abhinav)
+- [ ] ~Logo (Abhinav)~
 - [ ] Doctor Talk (Agrim/Abhinav/Agam)
 - [ ] F30/30 Talk (Abhinav)
-- [ ] MLA Talk (Agrim) 
+- [x] MLA Talk (Agrim) 
 
-<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma.
+<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma, Maanav .
