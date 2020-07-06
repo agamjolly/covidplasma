@@ -7,11 +7,11 @@
 .cool-bar {
     width: 100%;
 }
-
+/*
 .card-start {
     
 }
-
+*/
 .about_section { 
     padding: 1% 20% 1.5% 20%;
     /*display: block; */
@@ -21,7 +21,7 @@
 }
 
 .table-auto{
-    padding: 0% % 1% 1%;
+    padding: 0% 0% 1% 1%;
     margin-right: auto;
     margin-left: auto;
 }
