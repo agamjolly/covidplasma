@@ -20,6 +20,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] Create about.html (Agrim)
 - [x] Modify about.html to make is responsive (Agam)
 - [ ] Work on donate.html styling (Agrim)
+- [ ] SEO
 
 ### Backend Checklist (Agam, Harsh)
 
