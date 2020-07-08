@@ -22,6 +22,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] Work on donate.html styling (Agrim)
 - [ ] Donate page headline (Agrim) 
 - [ ] SEO (Agrim)
+- [ ] Remove blood from about page (Agam) 
 - [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
 - [ ] Contributors Page (Unassigned)
 
