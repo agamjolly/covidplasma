@@ -23,7 +23,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] Donate page headline (Agrim) 
 - [ ] SEO (Agrim)
 - [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
-- [ ] Contributors Page
+- [ ] Contributors Page (Unassigned)
 
 ### Backend Checklist (Agam, Harsh)
 
