@@ -30,12 +30,13 @@ A checklist entailing tasks to be completed for the dashboard.
 
 - [x] Route Domain (Agam)
 - [x] JSON Object Model (Harsh)
-- [ ] JSON Remodel and TinyDB (Harsh) 
+- [x] JSON Remodel and TinyDB (Harsh) 
 - [x] SSL Setup (Agam)
 - [x] www Redirect (Agam)
 - [x] List to Dictionary Model (Harsh) 
-- [ ] Jinja2 Templating (Agam)
-- [ ] Venv and Flask Setup (Agam)
+- [x] Jinja2 Templating (Agam)
+- [x] Venv and Flask Setup (Agam)
+- [ ] Middleware (Agam) 
 
 ### Misc Checklist (Abhinav, Agrim, Agam, Maanav)
 
