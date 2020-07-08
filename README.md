@@ -44,7 +44,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] GoDaddy Domain (Agrim)
 - [ ] Logo (Maanav)
 - [x] Doctor Talk (Agrim/Abhinav/Agam)
-- [ ] F30/30 Talk (Abhinav)
+- [ ] ~F30/30 Talk (Abhinav)~ 
 - [ ] MLA Talk (Agrim) 
 
 <h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma, Maanav .
