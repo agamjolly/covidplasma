@@ -19,15 +19,18 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] Initialise Test Data (Agrim)
 - [x] Create about.html (Agrim)
 - [x] Modify about.html to make is responsive (Agam)
-- [ ] Work on donate.html styling (Agrim)
-- [ ] SEO
+- [x] Work on donate.html styling (Agrim)
+- [ ] Donate page headline (Agrim) 
+- [ ] SEO (Agrim)
+- [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
 
 ### Backend Checklist (Agam, Harsh)
 
 - [x] Route Domain (Agam)
 - [x] JSON Object Model (Harsh)
-- [x] SSL Setup
-- [ ] www Redirect
+- [ ] JSON Remodel and TinyDB (Harsh) 
+- [x] SSL Setup (Agam)
+- [x] www Redirect (Agam)
 - [x] List to Dictionary Model (Harsh) 
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
@@ -37,8 +40,8 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
 - [ ] ~Logo (Abhinav)~
-- [ ] Doctor Talk (Agrim/Abhinav/Agam)
+- [x] Doctor Talk (Agrim/Abhinav/Agam)
 - [ ] F30/30 Talk (Abhinav)
-- [x] MLA Talk (Agrim) 
+- [ ] MLA Talk (Agrim) 
 
 <h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma, Maanav .
