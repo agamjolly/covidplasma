@@ -42,6 +42,7 @@ A checklist entailing tasks to be completed for the dashboard.
 
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
+- [ ] Jalandhar Noticeboard (Abhinav)
 - [ ] Logo (Maanav)
 - [x] Doctor Talk (Agrim/Abhinav/Agam)
 - [ ] ~F30/30 Talk (Abhinav)~ 
