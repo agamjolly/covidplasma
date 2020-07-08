@@ -8,7 +8,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] Content/One-liners for the donate page (Unassigned)
 - [ ] FAQ Page (Unassigned) 
 
-### Frontend Checklist (Agam, Agrim)
+### Frontend Checklist (Agam, Agrim, Maanav, Siddhant)
 
 - [x] Navbar Highlight (Agam/Agrim)
 - [x] Card Hover (Agam)
@@ -37,11 +37,11 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] Jinja2 Templating (Agam)
 - [ ] Venv and Flask Setup (Agam)
 
-### Misc Checklist (Abhinav, Agrim, Agam)
+### Misc Checklist (Abhinav, Agrim, Agam, Maanav)
 
 - [x] Twitter Account (Agrim)
 - [x] GoDaddy Domain (Agrim)
-- [ ] ~Logo (Abhinav)~
+- [ ] Logo (Maanav)
 - [x] Doctor Talk (Agrim/Abhinav/Agam)
 - [ ] F30/30 Talk (Abhinav)
 - [ ] MLA Talk (Agrim) 
