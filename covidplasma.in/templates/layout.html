@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title> {% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block seo %}{% endblock %}    
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='custom.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='animate.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</head>
+
+<body>
+
+    {% block body %} 
+    
+    {% endblock %}
+
+    <script>
+
+    $(document).ready(function(){ 
+        $('.nice-card').hover(
+            // trigger when mouse hovers
+            function(){
+                $(this).animate({
+                    marginTop: "-=1%",
+                },200);
+            },
+            // trigger when mouse out
+            function(){ 
+                $(this).animate({
+                    marginTop: "0%"
+                },200);
+            }
+        );
+    });
+
+      
+
+      $.extend($.expr[":"], {
+        "containsIN": function(elem, i, match, array) {
+        return (elem.textContent || elem.innerText || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+        }
+        });
+
+    $('.cool-bar').on('keyup',function () {
+        console.log(filter);
+        $('.card-start').show();
+	      var filter = $(this).val(); // get the value of the input, which we filter on
+        console.log(filter.toLowerCase());
+        $('.card-start').find("article:not(:containsIN(" + filter + "))").parent().css('display','none');
+    });  
+
+    </script>
+</body>
+
+</html>
