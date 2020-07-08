@@ -47,4 +47,4 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] ~F30/30 Talk (Abhinav)~ 
 - [ ] MLA Talk (Agrim) 
 
-<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma, Maanav .
+<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly.
