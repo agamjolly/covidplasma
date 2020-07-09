@@ -20,7 +20,7 @@ def api():
     if auth(user_key): 
         return jsonify(data)
     
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html', data=list(data))
 
