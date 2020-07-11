@@ -8,7 +8,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] Content/One-liners for the donate page (Unassigned)
 - [ ] FAQ Page (Unassigned) 
 
-### Frontend Checklist (Agam, Agrim, Maanav, Siddhant)
+### Frontend Checklist (Agam, Agrim, Angad, Maanav, Siddhant)
 
 - [x] Navbar Highlight (Agam/Agrim)
 - [x] Card Hover (Agam)
@@ -22,7 +22,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] Work on donate.html styling (Agrim)
 - [ ] Donate page headline (Agrim) 
 - [x] SEO (Agam)
-- [ ] Remove blood from about page (Agam) 
+- [x] Remove blood from about page (Angad) 
 - [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
 - [ ] Contributors Page (Unassigned)
 
@@ -46,4 +46,4 @@ A checklist entailing tasks to be completed for the dashboard.
 - [ ] F30/30 Talk (Abhinav)
 - [ ] MLA Talk (Agrim) 
 
-<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Abhinav Sharma, Maanav .
+<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Gunangad, Abhinav Sharma, Maanav.
