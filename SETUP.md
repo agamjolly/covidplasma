@@ -22,7 +22,7 @@ This would activate the virtual environment. You should see `(venv)` besides you
 
 The requirements for the app are contained in the `requirements.txt` file. You could install each package individually using `pip3 install <package-name>` or automatically install all dependencies using
 ```bash 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Running
