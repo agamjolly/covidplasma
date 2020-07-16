@@ -1,6 +1,10 @@
 # COVID-19 Plasma Dashboard
 
-India's largest public COVID-19 plasma donors dashboard.
+India's first open dashboard that uses crowdsourced data to connect COVID-19 patients to recovered donors for plasma therapy. 
+
+## API
+
+The API only facilitates `POST` requests in the form of a JSON. {{content work needed here}}
 
 ## Setup
 
