@@ -18,7 +18,7 @@ To activate the virtual, `cd` into the directory and run
 
 This would activate the virtual environment. You should see `(venv)` besides your directory in the terminal.
 
-## Installing Requirements
+## Installation Requirements
 
 The requirements for the app are contained in the `requirements.txt` file. You could install each package individually using `pip3 install <package-name>` or automatically install all dependencies using
 ```bash 
