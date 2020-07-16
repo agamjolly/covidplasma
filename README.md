@@ -1,49 +1,33 @@
 # COVID-19 Plasma Dashboard
 
-A checklist entailing tasks to be completed for the dashboard.
+India's largest public COVID-19 plasma donors dashboard.
 
-### Content Writing (Pranjal, Kevin)
+## Setup
 
-- [ ] Work on the about page (Pranjal/Kevin)
-- [ ] Content/One-liners for the donate page (Unassigned)
-- [ ] FAQ Page (Unassigned) 
+To run the file on your local machine, you need to activate the virtual environment `venv` contained in the directory.
 
-### Frontend Checklist (Agam, Agrim, Angad, Maanav, Siddhant)
+To activate the virtual environment, you need to ensure that you have the `virtualenv` package installed globally. To double check, try running 
+```bash
+pip3 install virtualenv
+```
 
-- [x] Navbar Highlight (Agam/Agrim)
-- [x] Card Hover (Agam)
-- [x] Change Footer (Agrim)
-- [x] Search Bar Filters Working (Agam) 
-- [x] Joining Navbar Components (Agrim)
-- [x] Donate and Contribute Pages (Agrim)
-- [x] Initialise Test Data (Agrim)
-- [x] Create about.html (Agrim)
-- [x] Modify about.html to make is responsive (Agam)
-- [x] Work on donate.html styling (Agrim)
-- [ ] Donate page headline (Agrim) 
-- [x] SEO (Agam)
-- [x] Remove blood from about page (Angad) 
-- [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
-- [ ] Contributors Page (Unassigned)
+To activate the virtual, `cd` into the directory and run 
+```bash
+. venv/bin/activate
+```
 
-### Backend Checklist (Agam, Harsh)
+This would activate the virtual environment. You should see `(venv)` besides your directory in the terminal.
 
-- [x] Route Domain (Agam)
-- [x] JSON Object Model (Harsh)
-- [x] JSON Remodel (Harsh) 
-- [x] SSL Setup (Agam)
-- [x] www Redirect (Agam)
-- [x] List to Dictionary Model (Harsh) 
-- [x] Jinja2 Templating (Agam)
-- [x] Venv and Flask Setup (Agam)
+## Installing Requirements
 
-### Misc Checklist (Abhinav, Agrim, Agam, Maanav)
+The requirements for the app are contained in the `requirements.txt` file. You could install each package individually using `pip3 install <package-name>` or automatically install all dependencies using
+```bash 
+pip3 install -r requirements.txt
+```
 
-- [x] Twitter Account (Agrim)
-- [x] GoDaddy Domain (Agrim)
-- [x] Logo (Maanav)
-- [x] Doctor Talk (Agrim/Abhinav/Agam)
-- [ ] F30/30 Talk (Abhinav)
-- [ ] MLA Talk (Agrim) 
+## Running
 
-<h6>Contributors &mdash; Harsh Arora, Agrim Gupta, Agam Jolly, Gunangad, Abhinav Sharma, Maanav.
+You can run the app using 
+```bash
+python3 app.py
+```
