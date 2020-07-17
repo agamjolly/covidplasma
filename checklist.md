@@ -24,7 +24,7 @@ A checklist entailing tasks to be completed for the dashboard.
 - [x] SEO (Agam)
 - [x] Remove blood from about page (Angad) 
 - [ ] Conceal Phone Numbers (Agam/Agrim/Maanav/Siddhant)
-- [ ] Contributors Page (Unassigned)
+- [ ] Contributors Page (Kushagra)
 
 ### Backend Checklist (Agam, Harsh)
 
