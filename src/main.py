@@ -9,7 +9,7 @@ json_url = os.path.join(SITE_ROOT, "static/data", "data.json")
 data = json.load(open(json_url))
 
 def auth(user_key=None): 
-    if user_key == "PUBLIC_KEY_HERE": 
+    if user_key == "SOME_KEY": 
         return True
     return False 
 
