@@ -4,7 +4,9 @@ India's first open dashboard that uses crowdsourced data to connect COVID-19 pat
 
 ## API
 
-The API only facilitates `POST` requests in the form of a JSON. If you want to have a look at the data being used by the backend in the form of JSON, you could simply make a `POST` request to the endpoint `https://www.covidplasma.in/api/v1/` using the standard public key issued to you. If you don't have a key yet and want to explore the API, please contact the administrator.
+The API only facilitates `POST` requests in the form of a JSON. If you want to have a look at the data being used by the backend in the form of JSON, you could simply make a `POST` request to the endpoint `https://www.covidplasma.in/api/v1/` using the standard public key issued to you. 
+
+If you don't have a key yet and want to explore the API, please contact the administrator.
 
 ## Setup
 
