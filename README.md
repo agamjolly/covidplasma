@@ -4,7 +4,7 @@ India's first open dashboard that uses crowdsourced data to connect COVID-19 pat
 
 ## API
 
-The API only facilitates `POST` requests in the form of a JSON. {{content work needed here}}
+The API only facilitates `POST` requests in the form of a JSON. If you want to have a look at the data being used by the backend in the form of JSON, you could simply make a `POST` request to the endpoint `https://www.covidplasma.in/api/v1/` using the standard public key issued to you. If you don't have a key yet and want to explore the API, please contact the administrator.
 
 ## Setup
 
@@ -35,3 +35,19 @@ You can run the app using
 ```bash
 python3 app.py
 ```
+
+You could also run the file by mounting a Docker image using the `Dockerfile` included in the source. Then run 
+```bash 
+docker build -t covidplasma .
+```
+
+To deploy, run
+```bash
+docker run -p 80:80 covidplasma
+```
+
+## Contribution and Questions
+
+Pull requests are welcome. For any further questions, feel free to reach out to me at me@agamjolly.com. Thank you!
+
+<h6> Contributors &mdash; Agam Jolly, Agrim Gupta, Harsh Arora, Maanav Khaitan, Siddhant Satapathy. 
