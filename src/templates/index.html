@@ -6,6 +6,23 @@
 <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<!-- SCRIPT LINK, STYLE FOR MODAL -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<style>
+  .modal {
+    transition: opacity 0.25s ease;
+    z-index: 10;
+  }
+  body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+  }
+  .search-bar {
+    z-index: 9;
+  }
+</style>
+
 <link rel="manifest" href="/site.webmanifest">
 <meta name="description" content="Find plasma donors around you who have recently recovered from the coronavirus, using India's largest public COVID-19 plasma donors dashboard. Filter by blood type, location etc.">
 <meta property="og:type" content="website">
@@ -20,6 +37,105 @@
 <meta property="twitter:image" content="static/logo.png">
 {% endblock %}
 {% block body %}
+
+<!--Modal-->
+
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+  <script>
+    $(document).ready(function(){        
+      document.getElementById('myModal').addClass('modal-active');
+       }); 
+  </script>
+  </body>
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" id="myModal"></div>
+    
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+      
+      <!-- Add margin if you want to see some of the overlay behind the modal-->
+      <div class="modal-content py-4 text-left px-6">
+        <!--Title-->
+        <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">Disclaimer</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+        <!--Body-->
+        <p>We at <b>covidplasma.in</b> try to verify our donors' information to the best of our ability. To ensure the well being of our patients looking for plasma donors, we specify whether the donor's information has been completely verfied by medical professionals in their info cards. While we try to maintain the authenticity of the information that we receive, we cannot verify every entry on the website.</p>
+        <br>
+        <p>However, contacting the plasma donor and performing primary verification of the donor's information still remains the patient's reponsibility. We strongly recommend that you ask the donor's for their relevant medical history with their complete documents.</p>
+        <br>
+        <p><b>Thus, we should not be held responsible for any fraudulent exchange of information. The users on the website are responsible for their actions with the data we make public.</b> </p>
+        <br>
+        <p>To learn more about us, kindly check our <a href={{ url_for("about") }}>about</a> section.</p>
+
+        <!--Footer-->
+        <div class="flex justify-end pt-2">
+          <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Accept</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- MODAL SCRIPTS-->
+  <script>
+    $(window).ready(function(){        
+      const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+       }); 
+  </script>
+
+  <!-- Working script -->
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+      event.preventDefault()
+      toggleModal()
+      })
+    }
+  
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+  
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+  
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+      isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+      toggleModal()
+      }
+    };
+  
+  
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    
+</script>
+
+<!-- Working script ENDS -->
+
+<!-- MODAL ENDS -->
     <div class="min-h-screen">
         <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
             <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
@@ -52,7 +168,7 @@
           <!-- This is an example component --><br>
      <div class="pt-2 relative mx-auto text-gray-600">
         <input class="cool-bar border-2 border-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-lg focus:outline-none"
-          type="search" name="search" placeholder="Filter by blood type, location...">
+          type="search" name="search" placeholder="Filter by blood type, location..." class='search-bar'>
         <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
           <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
