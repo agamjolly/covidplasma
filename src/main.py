@@ -8,7 +8,7 @@ SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 json_url = os.path.join(SITE_ROOT, "static/data", "data.json")
 data = json.load(open(json_url))
 
-accepted_keys = set(["Alpha3Hotel", "agam2001"])
+accepted_keys = set(["KEYS_GO_HERE"])
 
 def auth(user_key=None): 
     global accepted_keys
