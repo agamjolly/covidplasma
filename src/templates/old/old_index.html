@@ -20,106 +20,6 @@
 <meta property="twitter:image" content="static/logo.png">
 {% endblock %}
 {% block body %}
-
-<!--Modal-->
-<style>
-  .modal {
-    transition: opacity 0.25s ease;
-    z-index: 10;
-  }
-  body.modal-active {
-    overflow-x: hidden;
-    overflow-y: visible !important;
-  }
-  .search-bar {
-    z-index: 9;
-  }
-</style>
-  <div class="modal curve opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
-    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" id="myModal"></div>
-    
-    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-  
-      <div class="modal-content py-4 text-left px-6">
-        <div class="flex justify-between items-center pb-3">
-          <p class="text-2xl font-bold">Disclaimer</p>
-          <div class="modal-close cursor-pointer z-50">
-            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-            </svg>
-          </div>
-        </div>
-        <p>We at <b>covidplasma.in</b> try to verify our donors' information to the best of our ability. To ensure the well being of our patients looking for plasma donors, we specify whether the donor's information has been completely verfied by medical professionals in their info cards. While we try to maintain the authenticity of the information that we receive, we cannot verify every entry on the website.</p>
-        <br>
-        <p>Contacting the plasma donor and performing primary verification of the donor's information still remains the patient's reponsibility. We strongly recommend that you ask the donor's for their relevant medical history with their complete documents.</p>
-        <br>
-        <p><b>Thus, we should not be held responsible for any fraudulent exchange of information. The users on the website are responsible for their actions with the data we make public.</b> </p>
-        <br>
-        <p>By clicking on 'accept', you are affirming to follow our privacy policy.</p>
-
-        <div class="flex justify-end pt-2">
-          <button class="modal-close px-4 py-2 mt-2 text-sm font-semibold bg-indigo-600 p-3 rounded-lg text-white hover:bg-indigo-700">Accept</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <!-- MODAL SCRIPTS-->
-  <script>
-    $(window).ready(function(){        
-      const body = document.querySelector('body')
-        const modal = document.querySelector('.modal')
-        modal.classList.toggle('opacity-0')
-        modal.classList.toggle('pointer-events-none')
-        body.classList.toggle('modal-active')
-       }); 
-  </script>
-
-  <!-- Working script -->
-  <script>
-    var openmodal = document.querySelectorAll('.modal-open')
-    for (var i = 0; i < openmodal.length; i++) {
-      openmodal[i].addEventListener('click', function(event){
-      event.preventDefault()
-      toggleModal()
-      })
-    }
-  
-    const overlay = document.querySelector('.modal-overlay')
-    overlay.addEventListener('click', toggleModal)
-  
-    var closemodal = document.querySelectorAll('.modal-close')
-    for (var i = 0; i < closemodal.length; i++) {
-      closemodal[i].addEventListener('click', toggleModal)
-    }
-  
-    document.onkeydown = function(evt) {
-      evt = evt || window.event
-      var isEscape = false
-      if ("key" in evt) {
-      isEscape = (evt.key === "Escape" || evt.key === "Esc")
-      } else {
-      isEscape = (evt.keyCode === 27)
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-      toggleModal()
-      }
-    };
-  
-  
-    function toggleModal () {
-      const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
-    }
-    
-</script>
-
-<!-- Working script ENDS -->
-
-<!-- MODAL ENDS -->
     <div class="min-h-screen">
         <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
             <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
@@ -134,11 +34,9 @@
                             </button>
                         </div>
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-indigo-600 rounded-lg text-white md:mt-0 md:ml-4 hover:bg-indigo-700 focus:outline-none focus:shadow-outline" href="#">Home</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('faq') }}>FAQ</a>
-
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
       </nav>
   
 </div>
@@ -154,7 +52,7 @@
           <!-- This is an example component --><br>
      <div class="pt-2 relative mx-auto text-gray-600">
         <input class="cool-bar border-2 border-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-lg focus:outline-none"
-          type="search" name="search" placeholder="Filter by blood type, location..." class='search-bar'>
+          type="search" name="search" placeholder="Filter by blood type, location...">
         <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
           <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
@@ -192,14 +90,12 @@
                     <b>Recovery: </b>{{ i["recoveryDate"] }}       <br>
                     <b>Contact: </b>{{ i["contact"] }}       <br>
                     <b>Verified Entry: </b>{{ i["verified"] }}       <br>      
-    <!-- 
-      px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline
-    -->
+    
                 </div>
                 <div class="finder px-6 py-4 text-center wow fadeIn animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeIn;">
-                  <span class="inline-block bg-indigo-600 hover:bg-indigo-700 hover:text-white focus:outline-none focus:shadow-outline rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">{{ i["city"] }}</span>
-                  <span class="inline-block bg-indigo-600 hover:bg-indigo-700 hover:text-white focus:outline-none focus:shadow-outline rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">{{ i["bloodGroup"] }}</span>
-                  <span class="inline-block bg-indigo-600 hover:bg-indigo-700 hover:text-white focus:outline-none focus:shadow-outline rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">{{ i["age"] }}{{ i["sex"] }}</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ i["city"] }}</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ i["bloodGroup"] }}</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{{ i["age"] }}{{ i["sex"] }}</span>
                 </div>
               </div>
 
@@ -220,9 +116,10 @@
                 
                 
 
-<div class="bg-white">
-   <div class="bg-white flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col md:flex-row max-w-6xl">
-      <div class="mt-2">&copy; Copyright 2020. All Rights Reserved.</div>
+<div>
+   <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+      md:flex-row max-w-6xl">
+      <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
       <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
         
          <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

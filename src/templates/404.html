@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}About | COVID-19 Plasma Dashboard{% endblock %}
+{% block title %}Page Not Found | COVID-19 Plasma Dashboard{% endblock %}
 {% block seo %}
 <meta name="keywords" content="plasma, donate, corona plasma, corona, coronavirus, plasma donate, plasma donors, plasma donation, dashboard, covid 19, covid-19, covid-19 plasma, covid treatment, treatment, blood donors, dhoondh">
 <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
@@ -8,13 +8,12 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.covidplasma.in/about">
-<meta property="og:title" content="About | COVID-19 India Plasma Dashboard">
+<meta property="og:title" content="Page Not Found | COVID-19 India Plasma Dashboard">
 <meta property="og:description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
 <meta property="og:image" content="static/logo.png">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.covidplasma.in/about">
-<meta property="twitter:title" content="About | COVID-19 India Plasma Dashboard">
+<meta property="twitter:url" content="https://www.covidplasma.in/">
+<meta property="twitter:title" content="Page Not Found | COVID-19 India Plasma Dashboard">
 <meta property="twitter:description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
 <meta property="twitter:image" content="static/logo.png">
 {% endblock %}
@@ -33,19 +32,22 @@
                         </button>
                     </div>
   <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">About</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('faq') }}>FAQ</a>
   </nav>
 
 </div>
 <div class="py-12 bg-white">
-<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-screen-xxl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="text-center">
     <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-      404 Page not found!
+      404 &mdash; Page not found.
     </h3>
-    <br><br>
+    <br>
+    <h1>Click <a href="{{ url_for('index') }}" style="font-weight: bolder;">here</a> to go back to the homepage.</h1>
+    <br>
     
   </div>
     
@@ -57,9 +59,9 @@
 <!-- Footer --> 
                   
 
-<div>
+<div style="left: 0; bottom:0; position:fixed; width:100%;">
 <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
-  md:flex-row max-w-6xl">
+  md:flex-row max-w-6xl" style="bottom:0; left: 10vw; right:10vw; position:fixed; width:100%;">
   <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
   <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
     

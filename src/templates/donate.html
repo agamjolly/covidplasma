@@ -20,31 +20,37 @@
 {% endblock %}
 {% block body %}
 
-    <div class="min-h-screen">
-        <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
-            <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-                <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                    <div class="flex flex-row items-center justify-between p-4">
-                        <a href={{ url_for('index') }} class="text-lg font-extrabold tracking-tight rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">COVIDPLASMA</a>
-                            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
+<div class="min-h-screen">
+  <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+      <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+          <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+              <div class="flex flex-row items-center justify-between p-4">
+                  <a href= {{ url_for('index') }} class="text-lg font-extrabold tracking-tight rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">COVIDPLASMA</a>
+                      <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                          </svg>
+                      </button>
+                  </div>
 
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200  rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
+<!-- 
+  px-4 py-2 mt-2 text-sm font-semibold bg-indigo-500 rounded-lg text-white md:mt-0 md:ml-4 hover:bg-indigo-400 focus:outline-none focus:shadow-outline
+  px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline
+-->
+<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
+<a class="px-4 py-2 mt-2 text-sm font-semibold bg-indigo-600 rounded-lg text-white md:mt-0 md:ml-4 hover:bg-indigo-700 focus:outline-none focus:shadow-outline" href="#">Donate</a>
+<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
+<a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('faq') }}>FAQ</a>
+
       </nav>
   
 </div>
 
 <!-- END NAVBAR -->
 
-<div class="py-12 bg-white">
+<div class="pl-6 pr-6 py-12 bg-white">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
@@ -76,6 +82,7 @@
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Raman" name = "lname">
     </div>
   </div>
+<<<<<<< HEAD
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0">
       <label class="block tracking-wide text-gray-700 text-s font-bold mb-2" for="grid-email">
@@ -97,6 +104,29 @@
         <input type="checkbox" id="conceal-no" name="conceal-phone" value="privacy-feature">
     </div>
     
+=======
+  
+<div class="flex flex-wrap -mx-3 mb-6">
+  <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0">
+  <label class="block tracking-wide text-gray-700 text-s font-bold mb-2" for="grid-email">
+  Email
+  </label>
+  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-email" type="email" placeholder="rohitraman@gmail.com" name="email-for-contact">
+  <p class="text-gray-600 text-xs italic">We will reach out to you with responses from patients here.</p>
+  </div>
+  <div class="w-full md:w-2/5 px-3">
+  <label class="block tracking-wide text-gray-700 text-s font-bold mb-2" for="grid-phone">
+  Phone
+  </label>
+  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone" type="text" placeholder="+91 9999999999" name="phone-for-contact">
+  </div>
+  <div class="w-full md:w-1/5 px-3">
+  <label class="block tracking-wide text-gray-700 text-s font-bold mb-2" for="conceal-no">
+  Conceal Phone?
+  </label>
+  <input type="checkbox" id="conceal-no" name="conceal-phone" value="privacy-feature">
+  </div>
+>>>>>>> 1d13376ba962e500631e87c4433623432a96ba48
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
@@ -266,7 +296,7 @@
     
     <br>
   <div allign="center">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Submit" name = "submission">
+      <button class="bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Submit" name = "submission">
         Submit
       </button>
     </div>
@@ -284,10 +314,10 @@
       <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
       <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
         
-         <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!--         <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
-      </div>
+        <!--<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
+     </div>
    </div>
 </div>
                 <!-- Footer end--> 

@@ -8,10 +8,11 @@ SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 json_url = os.path.join(SITE_ROOT, "static/data", "data.json")
 data = json.load(open(json_url))
 
+accepted_keys = set(["KEYS_GO_HERE"])
+
 def auth(user_key=None): 
-    if user_key == "SOME_KEY": 
-        return True
-    return False 
+    global accepted_keys
+    return True if user_key in accepted_keys else False 
 
 @app.errorhandler(404)
 def not_found(e):
@@ -37,9 +38,5 @@ def donate():
 def about():
     return render_template('about.html')
 
-@app.route('/checklist')
-def checklist():
-    return render_template('test.html') 
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80) # host='127.0.0.1', port=8000, debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True) # set debug=False when deploying

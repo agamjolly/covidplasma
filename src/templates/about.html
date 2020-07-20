@@ -33,9 +33,11 @@
                         </button>
                     </div>
   <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
-    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">About</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-600 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-indigo-600 rounded-lg text-white md:mt-0 md:ml-4 hover:bg-indigo-700 focus:outline-none focus:shadow-outline" href="#">About</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-indigo-400 hover:text-white focus:outline-none focus:shadow-outline" href={{ url_for('faq') }}>FAQ</a>
+
   </nav>
 
 </div>
@@ -56,7 +58,7 @@
 <!-- to allign in the centre -->
 <div class="about_section md:flex" >
 <div class="md:flex-shrink-0">
-<img class="plasma rounded-lg md:w-56" src="https://www.zeta.com/en/0uploads/bilder525.jpg" alt="PlasmaTestTube">
+<img class="plasma rounded-lg md:w-56" src="https://www.zeta.com/en/0uploads/bilder525.jpg" alt="Plasma Test Tube">
 </div>
 <div class="mt-4 md:mt-0 md:ml-6">
 <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">MISSION</div>
@@ -134,11 +136,11 @@
   md:flex-row max-w-6xl">
   <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
   <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-    
-     <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+    <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-     <!--<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
-  </div>
+    <!--<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
+ </div>
 </div>
 </div>
             <!-- Footer end--> 
