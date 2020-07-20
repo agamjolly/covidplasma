@@ -52,4 +52,4 @@ docker run -p 80:80 covidplasma
 
 Pull requests are welcome. For any further questions, feel free to reach out to me at me@agamjolly.com. Thank you!
 
-<h6> Contributors &mdash; Agam Jolly, Agrim Gupta, Harsh Arora, Gunangad Pal Singh Narula, Maanav Khaitan, Siddhant Satapathy. 
+<h6> Contributors &mdash; Agam Jolly, Agrim Gupta, Harsh Arora, Gunangad Pal Singh Narula, Maanav Khaitan, Siddhant Satapathy, Kushagra Wadhwa. 
