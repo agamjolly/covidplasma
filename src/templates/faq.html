@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block title %}FAQ | COVID-19 Plasma Dashboard{% endblock %}
+{% block seo %}
+<meta name="keywords" content="plasma, donate, corona plasma, corona, coronavirus, plasma donate, plasma donors, plasma donation, dashboard, covid 19, covid-19, covid-19 plasma, covid treatment, treatment, blood donors, dhoondh, faq, frequently asked questions, cdc, who, vaccine">
+<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.covidplasma.in/about">
+<meta property="og:title" content="About | COVID-19 India Plasma Dashboard">
+<meta property="og:description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
+<meta property="og:image" content="static/logo.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.covidplasma.in/about">
+<meta property="twitter:title" content="About | COVID-19 India Plasma Dashboard">
+<meta property="twitter:description" content="Find plasma donors for your or your loved ones' plasma therapy against COVID-19. Our team created a website to connect current coronavirus patients with recovered ones who wish to donate their plasma.">
+<meta property="twitter:image" content="static/logo.png">
+{% endblock %}
+{% block body %}
+<div class="min-h-screen">
+    <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+        <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+            <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                <div class="flex flex-row items-center justify-between p-4">
+                    <a href={{ url_for('index') }} class="text-lg font-extrabold tracking-tight rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">COVIDPLASMA</a>
+                        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+  <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('index') }}>Home</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('donate') }}>Donate</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href={{ url_for('about') }}>About</a>
+    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">FAQ</a>
+  </nav>
+
+</div>
+<div class="py-12 bg-white">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center">
+    <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+      FAQ
+    </h3>
+    <p class="text-center mt-4 text-xl leading-7 text-gray-500 lg:mx-auto">
+      Find answers to the questions most frequently asked from us.
+    </p>
+    <br><br>
+  </div>
+    
+
+</div>
+
+
+<!-- to allign in the centre -->
+<div class="about_section md:flex" >
+<div class="mt-4 md:mt-0 md:ml-6">
+
+<h2 class="block mt-1 text-lg leading-tight font-semibold text-gray-700">Q1. How do you ensure the privacy of your donors? </h2>
+<p class="mt-2 text-gray-600">To ensure the privacy of our donors, we do not share private information such as name, email or address publicly. While we do *however* recommend our donor’s to make their phone numbers public for the patients to be able to contact the donors. If you’re a donor and wish to have your phone concealed, you can choose so while signing up as a donor. If you’re a patient and want to contact a donor who doesn’t have their contact information public, please see question 3.
+</p>
+<br>
+<h2 class="block mt-1 text-lg leading-tight font-semibold text-gray-700">Q2. Is everything verified on your website? </h2>
+<p class="mt-2 text-gray-600"> Each donor’s information card states whether their information has been verified on our end or not. Even for verified donors, patients in need of plasma are required to perform their own verification. 
+</p>
+<br>
+<h2 class="block mt-1 text-lg leading-tight font-semibold text-gray-700">Q3. How do I reach a donor who doesn’t have their contact information public? </h2>
+<p class="mt-2 text-gray-600">You can write to us at ___(fill email)___ or ____(social media handles)____ and we will contact those donors ourself. We will keep you updated on the donor’s responses, someone from our team is involved in such communication 24 hours a day. We understand how urgent the sphere of plasma and blood donation is, therefore we will try our best to reach back to you in the earliest possible time. 
+</p>
+<br>
+<h2 class="block mt-1 text-lg leading-tight font-semibold text-gray-700">Q4. How do you verify a registering donor? </h2>
+<p class="mt-2 text-gray-600">(Response)
+</p>
+<br>
+
+</div>
+</div>  
+
+<!-- to allign in the centre -->
+
+
+<br>
+
+<!-- Footer --> 
+            
+            
+
+<div>
+<div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+  md:flex-row max-w-6xl">
+  <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
+  <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+    
+     <a href="https://twitter.com/covidplasma?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">Follow @covidplasma</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+     <!--<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="GitHub"></iframe>-->
+  </div>
+</div>
+</div>
+            <!-- Footer end--> 
+</div>
+</div>
+
+</div>
+
+  </div>
+
+{% endblock %}
