@@ -1,6 +1,6 @@
 # COVID-19 Plasma Dashboard
 
-India's first open dashboard that uses crowdsourced data to connect COVID-19 patients to recovered donors for plasma therapy. 
+World's first open dashboard that uses crowdsourced data to connect COVID-19 patients to recovered donors for plasma therapy. 
 
 ## API
 
